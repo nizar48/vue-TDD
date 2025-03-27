@@ -5,7 +5,7 @@
     </header>
 
     <main>
-      <ProductCatalog />
+      <ProductCatalog/>
     </main>
 
     <footer>
@@ -14,7 +14,11 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+
+import ProductFilter from "./components/ProductFilter.vue";
+import ProductCatalog from "./components/ProductCatalog.vue";
+</script>
 
 <style>
 * {
