@@ -8,6 +8,7 @@ const props = defineProps({
 const emit = defineEmits(["sort-change"]);
 
 const sortOptions = [
+  {label: "Select an option", value: ""},
   {label: "Price: Low to High", value: "price-asc"},
   {label: "Price: High to Low", value: "price-desc"},
   {label: "Rating: High to Low", value: "rating-desc"},
@@ -19,8 +20,8 @@ const handleSortChange = (event) => {
 </script>
 
 <template>
-  <div>
-    <label for="sort">Sort By:</label>
+  <div class="container">
+    <label for="sort">Filter by price/rating:</label>
     <select
         id="sort"
         :value="currentSort"
@@ -43,10 +44,22 @@ const handleSortChange = (event) => {
 
 <style scoped>
 select {
+  margin-left: 20px;
   cursor: pointer;
+  padding: 10px;
+  width: 320px;
+  font-size: 16px;
 }
 
 option.active {
   font-weight: bold;
+}
+
+.container {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 </style>

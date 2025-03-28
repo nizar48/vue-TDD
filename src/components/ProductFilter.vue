@@ -18,8 +18,8 @@ const handleSearchInput = (event) => {
 </script>
 
 <template>
-  <div>
-    <input type="text" @input="handleSearchInput"/>
+  <div class="container">
+    <input class="search_input" placeholder="Type your search here.." type="text" @input="handleSearchInput"/>
     <ul>
       <li>
         <button
@@ -40,3 +40,32 @@ const handleSearchInput = (event) => {
     </ul>
   </div>
 </template>
+
+
+<style scoped>
+.search_input {
+  width: 70%;
+  margin-right: 30px;
+  padding: 0 10px;
+}
+
+.container {
+  display: flex;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  column-gap: 25px;
+}
+
+li {
+  list-style: none;
+
+  button {
+    cursor: pointer;
+    padding: 8px 16px;
+  }
+}
+</style>
