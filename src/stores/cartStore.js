@@ -18,15 +18,19 @@ export const useCartStore = defineStore("cartStore", {
             return +(this.subtotal + this.tax).toFixed(2);
         },
     },
-    
+
 
     actions: {
         addToCart(product) {
             const existingItem = this.items.find((item) => item.product.id === product.id);
             if (existingItem) {
                 existingItem.quantity++;
+                console.log(product, " added")
+
             } else {
                 this.items.push({product, quantity: 1});
+                console.log(product, " added")
+
             }
         },
 

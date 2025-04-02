@@ -5,8 +5,8 @@ export const useProductStore = defineStore("productStore", {
     state: () => ({
         products,
         categories, // added for testing
-        filteredProducts: products,
         selectedCategory: null,
+        filteredProducts: products,
         searchQuery: "",
         sortOption: "",
     }),

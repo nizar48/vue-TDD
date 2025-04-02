@@ -10,11 +10,12 @@
   </div>
 
   <div v-else class="grid">
-    <ProductCard v-for="product in filteredProducts" :key="product.id" :product="product"/>
+    <ProductCard @add-to-cart="cartStore.addToCart(product.id)" v-for="product in filteredProducts" :key="product.id"
+                 :product="product"/>
   </div>
 
 </template>
-
+        
 <script setup>
 
 import ProductFilter from "./ProductFilter.vue";
@@ -22,9 +23,12 @@ import { useProductStore } from "../stores/productStore.js";
 import { computed } from "vue";
 import ProductCard from "./ProductCard.vue";
 import ProductSort from "./ProductSort.vue";
+import { useCartStore } from "../stores/cartStore.js";
 
 
 const store = useProductStore()
+
+const cartStore = useCartStore()
 
 const filteredProducts = computed(() => store.filteredProducts)
 
