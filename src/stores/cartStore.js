@@ -18,6 +18,7 @@ export const useCartStore = defineStore("cartStore", {
             return +(this.subtotal + this.tax).toFixed(2);
         },
     },
+    
 
     actions: {
         addToCart(product) {
