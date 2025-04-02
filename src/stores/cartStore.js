@@ -26,10 +26,14 @@ export const useCartStore = defineStore("cartStore", {
             if (existingItem) {
                 existingItem.quantity++;
                 console.log(product, " added")
+                console.log("items: ", this.items);
+
 
             } else {
                 this.items.push({product, quantity: 1});
                 console.log(product, " added")
+                console.log("items: ", this.items)
+
 
             }
         },

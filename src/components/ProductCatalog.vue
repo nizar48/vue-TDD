@@ -10,12 +10,12 @@
   </div>
 
   <div v-else class="grid">
-    <ProductCard @add-to-cart="cartStore.addToCart(product.id)" v-for="product in filteredProducts" :key="product.id"
+    <ProductCard @add-to-cart="cartStore.addToCart(product)" v-for="product in filteredProducts" :key="product.id"
                  :product="product"/>
   </div>
 
 </template>
-        
+
 <script setup>
 
 import ProductFilter from "./ProductFilter.vue";
