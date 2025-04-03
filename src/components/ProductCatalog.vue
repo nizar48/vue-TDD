@@ -1,5 +1,5 @@
 <template>
-
+  <RouterLink to="/cart">go to cart</RouterLink>
   <div class="product-control">
     <ProductFilter @category-change="handleCategoryChange" @search-change="handleSearchChange"
                    :categories="categories"/>

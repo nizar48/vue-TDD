@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import CartItem from "../components/CartItem.vue";
 import ProductCatalog from "../components/ProductCatalog.vue";
 import CartSummary from "../components/CartSummary.vue";
 import RouteTesting from "../components/RouteTesting.vue";
+import ShoppingCart from "../components/ShoppingCart.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -13,7 +13,7 @@ const router = createRouter({
         },
         {
             path: "/cart",
-            component: CartItem,
+            component: ShoppingCart,
         },
         {
             path: "/summary",

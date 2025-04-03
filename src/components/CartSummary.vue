@@ -29,3 +29,18 @@ const formattedSubtotal = computed(() => `$${ cartStore.subtotal.toFixed(2) }`);
 const formattedTax = computed(() => `$${ cartStore.tax.toFixed(2) }`);
 const formattedGrandTotal = computed(() => `$${ cartStore.grandTotal.toFixed(2) }`);
 </script>
+
+<style scoped>
+button {
+  background-color: #1b1b1b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 2px solid cornflowerblue;
+}
+</style>

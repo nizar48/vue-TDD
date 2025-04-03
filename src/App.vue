@@ -5,7 +5,7 @@
     </header>
 
     <main>
-      <ProductCatalog/>
+      <router-view/>
     </main>
 
     <footer>

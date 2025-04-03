@@ -21,7 +21,9 @@ import CartSummary from "./CartSummary.vue";
 
 const cartStore = useCartStore()
 
-const cartItems = computed(() => cartStore.cartItems);
+const cartItems = computed(() => cartStore.items);
+
+console.log("cart items: ", cartStore.items)
 
 </script>
 
